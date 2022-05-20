@@ -24,8 +24,10 @@ export default function BasicSelect(props) {
           label="Age"
           onChange={handleChange}
         >
-          {[...Array(props.count)].map((e, i) => (
-            <MenuItem value={i}>{i + 1}</MenuItem>
+          {[...Array(20)].map((e, i) => (
+            <MenuItem value={i} key={i}>
+              {i + 1}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>
